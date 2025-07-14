@@ -15,10 +15,12 @@ export const Dashboard = () => {
   const {purchasedCourse}=data||[];
 
   //courseData has name or price
-  const courseData=purchasedCourse.map((course)=>({
-    name:course.courseId.courseTitle,
-    price:course.courseId.coursePrice
-  }))
+  const courseData = purchasedCourse
+  ?.filter(course => course?.courseId)  // Filter out null or missing courseId
+  .map(course => ({
+    name: course.courseId.courseTitle || 'Untitled',
+    price: course.courseId.coursePrice || 0
+  }));
 
   //reduce-sum krta h sari course price ka
   const totalRevenue=purchasedCourse.reduce((acc,element)=>acc+(element.amount||0),0);
