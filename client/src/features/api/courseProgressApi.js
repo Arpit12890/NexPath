@@ -1,7 +1,7 @@
 import { createApi } from "@reduxjs/toolkit/query/react";
 import { fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const COURSE_PROGRESS_API = "http://localhost:3000/api/v1/progress";
+const COURSE_PROGRESS_API = "https://nexpath.onrender.com/api/v1/progress";
 
 export const courseProgressApi = createApi({
     reducerPath: "courseProgressApi",

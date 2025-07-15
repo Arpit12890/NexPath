@@ -14,7 +14,7 @@ import { useParams } from 'react-router-dom'
 import { toast } from 'sonner'
 
 //api endpoint
-const MEDIA_API = "http://localhost:3000/api/v1/media";
+const MEDIA_API = "https://nexpath.onrender.com/api/v1/media";
 
 const LectureTab = () => {
 

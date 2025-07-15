@@ -24,7 +24,7 @@ const _dirname=path.resolve(); //directory ka path mil jayega
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: "https://nexpath.onrender.com",
     credentials: true
 }))
 
